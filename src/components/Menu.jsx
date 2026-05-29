@@ -8,109 +8,69 @@ import { useCart } from '../context/CartContext'
 // ──────────────────────────────────────────────────────────────────────────
 
 const menuData = {
-  'fast-food': {
-    label: 'Fast Food',
-    note: 'Quantity: Half Plate',
+  'crispy': {
+    label: 'Crispy',
+    note: 'Hot & crunchy — fried fresh on every order',
     items: [
-      {
-        name: 'Single Egg Chicken Chowmin',
-        price: 60,
-        tag: 'Classic',
-        image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg',
-      },
-      {
-        name: 'Double Egg Chicken Chowmin',
-        price: 70,
-        tag: 'Loaded',
-        image: 'https://knifeandsoul.com/wp-content/uploads/2022/09/chicken_chow_mein_step_4.jpg',
-      },
-      {
-        name: 'Single Egg Chicken Roll',
-        price: 60,
-        tag: 'Classic',
-        image: 'https://img.clevup.in/248878/1660988348406_SKU-0010_0.jpg?width=600&format=webp',
-      },
-      {
-        name: 'Double Egg Chicken Roll',
-        price: 70,
-        tag: 'Loaded',
-        image: 'https://storage.googleapis.com/shy-pub/167599/1648445263713_SKU-0675_0.jpg',
-      },
-      {
-        name: 'Crispy Chicken Pakoda',
-        price: 60,
-        tag: 'Spicy',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXe7UYiMgPRYc3_xmMa8-2N6bFanVffQBmw&s',
-      },
+      // Crispy Chicken Items
+      { name: 'Chicken Crispy Stick', price: 29, unit: '1 pc', tag: 'Crunchy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s' },
+      { name: 'Chicken Crispy Stripe', price: 29, unit: '1 pc', tag: 'Crunchy', image: 'https://www.greenchickchop.in/cdn/shop/files/CrispyChickenFinger_1__result.webp?v=1682588223' },
+      { name: 'Chicken Crispy Wings', price: 49, unit: '1 pc', tag: 'Saucy', image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg' },
+      { name: 'Chicken Crispy Drumstick', price: 59, unit: '1 pc', tag: 'Big Bite', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s' },
+      // Crispy Chicken Pakoda
+      { name: 'Chicken Pakoda', price: 59, unit: '5 pcs', tag: 'Spicy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXe7UYiMgPRYc3_xmMa8-2N6bFanVffQBmw&s' },
+      { name: 'Chicken Wings Pakoda', price: 49, unit: '1 pc', tag: 'Hot', image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg' },
+      { name: 'Chicken Stick Pakoda', price: 29, unit: '1 pc', tag: 'Snack', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s' },
+      { name: 'Chicken Drumstick Pakoda', price: 59, unit: '1 pc', tag: 'Big Bite', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s' },
+      // Chicken Tandoori
+      { name: 'Chicken Tandoori Stick', price: 29, unit: '1 pc', tag: 'Smoky', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
+      { name: 'Chicken Tandoori Wings', price: 49, unit: '1 pc', tag: 'Tandoori', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
+      { name: 'Chicken Tandoori Drumstick', price: 59, unit: '1 pc', tag: 'Juicy', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
     ],
   },
-  'crispy': {
-    label: 'Crispy Items',
-    note: 'Sold by the piece — order as many as you can crunch',
+  'meals': {
+    label: 'Meals',
+    note: 'Made fresh — chowmin, rolls & maggie to fill you up',
     items: [
-      {
-        name: 'Crispy Hot Chicken',
-        price: 39,
-        unit: '1 pc',
-        tag: 'Hot',
-        image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg'
-      },
-      {
-        name: 'Crispy Chicken Wings',
-        price: 29,
-        unit: '1 pc',
-        tag: 'Saucy',
-        image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg',
-      },
-      {
-        name: 'Crispy Chicken Drumstick',
-        price: 59,
-        unit: '1 pc',
-        tag: 'Big Bite',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s',
-      },
-      {
-        name: 'Crispy Chicken Stripes',
-        price: 29,
-        unit: '1 pc',
-        tag: 'Crunchy',
-        image: 'https://www.greenchickchop.in/cdn/shop/files/CrispyChickenFinger_1__result.webp?v=1682588223',
-      },
-      {
-        name: 'Crispy Chicken Stick',
-        price: 29,
-        unit: '1 pc',
-        tag: 'On-the-go',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s',
-      },
-      {
-        name: 'Chicken Burger',
-        price: 49,
-        unit: '1 pc',
-        tag: 'Filling',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBffN5VOapKzJ88Y07pBTsWu29TQgcX83-sw&s',
-      },
-      {
-        name: 'Crispy French Fries',
-        price: 29,
-        unit: '100 gm',
-        tag: 'Side',
-        image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg',
-      },
-      {
-        name: 'Crispy Spring Potato',
-        price: 29,
-        unit: '1 pc',
-        tag: 'Twist',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjbxfETgmD5nas8jcp6Rkbg5jR0NOV94ZkNw&s',
-      },
-      {
-        name: 'Crispy Chicken Popcorn',
-        price: 49,
-        unit: '100 gm',
-        tag: 'Shareable',
-        image: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Popcorn-Chicken.jpg',
-      },
+      // Chowmin
+      { name: 'Single Egg Chicken Chowmin', price: 49, tag: 'Classic', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
+      { name: 'Double Egg Chicken Chowmin', price: 59, tag: 'Loaded', image: 'https://knifeandsoul.com/wp-content/uploads/2022/09/chicken_chow_mein_step_4.jpg' },
+      // Rolls
+      { name: 'Single Egg Chicken Roll', price: 59, tag: 'Classic', image: 'https://img.clevup.in/248878/1660988348406_SKU-0010_0.jpg?width=600&format=webp' },
+      { name: 'Double Egg Chicken Roll', price: 69, tag: 'Loaded', image: 'https://storage.googleapis.com/shy-pub/167599/1648445263713_SKU-0675_0.jpg' },
+      // Maggie
+      { name: 'Plain Masala Maggie', price: 29, tag: 'Comfort', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
+      { name: 'Single Egg Chicken Masala Maggie', price: 49, tag: 'Filling', image: 'https://knifeandsoul.com/wp-content/uploads/2022/09/chicken_chow_mein_step_4.jpg' },
+      { name: 'Double Egg Chicken Masala Maggie', price: 59, tag: 'Loaded', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
+    ],
+  },
+  'snacks': {
+    label: 'Snacks',
+    note: 'Fries, burgers & sandwiches — the perfect combo',
+    items: [
+      // French Fries
+      { name: 'French Fries Small', price: 29, unit: 'Small', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
+      { name: 'French Fries Medium', price: 39, unit: 'Medium', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
+      { name: 'French Fries Big', price: 49, unit: 'Big', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
+      { name: 'Potato Twister', price: 29, unit: '1 pc', tag: 'Twist', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjbxfETgmD5nas8jcp6Rkbg5jR0NOV94ZkNw&s' },
+      // Burger
+      { name: 'Plain Chicken Burger', price: 39, unit: '1 pc', tag: 'Classic', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBffN5VOapKzJ88Y07pBTsWu29TQgcX83-sw&s' },
+      { name: 'Cheese Chicken Burger', price: 49, unit: '1 pc', tag: 'Cheesy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBffN5VOapKzJ88Y07pBTsWu29TQgcX83-sw&s' },
+      // Sandwich
+      { name: 'Plain Sandwich', price: 29, unit: '1 pc', tag: 'Simple', image: 'https://img.magnific.com/free-photo/sandwich_1339-1108.jpg?semt=ais_hybrid&w=740&q=80' },
+      { name: 'Egg Sandwich', price: 39, unit: '1 pc', tag: 'Eggy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBioXkVeNKqxudv7kelIGuN0ZA1juiuvCk5Q&s' },
+      { name: 'Egg Chicken Sandwich', price: 49, unit: '1 pc', tag: 'Loaded', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4n400PqmY5p_25v7-IXD7WVhYmtUM0AMN9A&s' },
+    ],
+  },
+  'drinks': {
+    label: 'Drinks',
+    note: 'Chill out with our refreshing cold drinks & mocktails',
+    items: [
+      { name: 'Plain Cola', price: 39, tag: 'Classic', image: 'https://media.istockphoto.com/id/530428650/photo/cola-glass-with-ice-cubes.jpg?s=612x612&w=0&k=20&c=keqH2KNWHO1sFxtsBfx5EZjyep1CRBHIqwe_ZwxszHc=' },
+      { name: 'Plain Sprite', price: 39, tag: 'Fizzy', image: 'https://d1w7312wesee68.cloudfront.net/g17-4fWiinGJbf6SCpFgh3-M3Yai5LZkDNips82mrDw/resize:fit:720:720/plain/s3://toasttab/restaurants/brand/coca-cola/Sprite_Fountain.jpg' },
+      { name: 'Jal Jeera Mixed', price: 39, tag: 'Tangy', image: 'https://sinfullyspicy.com/wp-content/uploads/2012/06/1.jpg' },
+      { name: 'Lemon Mint Mixed', price: 49, tag: 'Fresh', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1MTVTpgCxPF-0fchNZj_9bxwXvazuRUBYA&s' },
+      { name: 'Blue Lagoon', price: 49, tag: 'Special', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCgR4P2_SXS8CIxhLHTVJ3nohagEiXT5GTw&s' },
     ],
   },
 }

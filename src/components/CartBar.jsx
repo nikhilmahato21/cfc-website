@@ -13,9 +13,12 @@ export default function CartBar() {
   const { cart, addItem, removeItem, clearCart, total, count } = useCart()
   const [expanded, setExpanded] = useState(false)
 
+  const DELIVERY_CHARGE = 29
+
   const sendWhatsApp = () => {
     const lines = cart.map(i => `• ${i.name}${i.unit ? ` (${i.unit})` : ''} x${i.qty} = ₹${i.price * i.qty}`)
-    const text = `🍗 *CFC Order*\n\n${lines.join('\n')}\n\n*Total: ₹${total}*\n\nPlease confirm my order! 🙏`
+    const grandTotal = total + DELIVERY_CHARGE
+    const text = `🍗 *CFC Order*\n\n${lines.join('\n')}\n\nItems Total: ₹${total}\nDelivery Charge: ₹${DELIVERY_CHARGE}\n*Grand Total: ₹${grandTotal}*\n\n📍 *Please share your delivery location!*\n\nPlease confirm my order! 🙏`
     window.open(`https://wa.me/918260831810?text=${encodeURIComponent(text)}`, '_blank')
   }
 
@@ -64,7 +67,21 @@ export default function CartBar() {
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-end px-4 pb-2 pt-1 border-t border-cfc-deep/5">
+                <div className="px-4 pt-2 pb-1 border-t border-cfc-deep/5 space-y-1">
+                  <div className="flex justify-between text-xs text-cfc-deep/50">
+                    <span>Items subtotal</span>
+                    <span>₹{total}</span>
+                  </div>
+                  <div className="flex justify-between text-xs text-cfc-deep/70">
+                    <span>Delivery charge</span>
+                    <span>₹{DELIVERY_CHARGE}</span>
+                  </div>
+                  <div className="flex justify-between text-sm font-bold text-cfc-deep border-t border-cfc-deep/10 pt-1">
+                    <span>Grand Total</span>
+                    <span className="text-cfc-red">₹{total + DELIVERY_CHARGE}</span>
+                  </div>
+                </div>
+                <div className="flex justify-end px-4 pb-2 pt-1">
                   <button
                     onClick={clearCart}
                     className="text-xs text-cfc-deep/40 hover:text-cfc-red transition-colors flex items-center gap-1"
@@ -90,7 +107,8 @@ export default function CartBar() {
               </div>
               <span className="font-bold truncate">{count} item{count !== 1 ? 's' : ''}</span>
               <span className="text-cfc-cream/50">·</span>
-              <span className="font-bold text-yellow-300">₹{total}</span>
+              <span className="font-bold text-yellow-300">₹{total + DELIVERY_CHARGE}</span>
+              <span className="text-cfc-cream/40 text-[10px]">incl. delivery</span>
               {expanded
                 ? <ChevronDown className="w-4 h-4 ml-auto shrink-0" />
                 : <ChevronUp className="w-4 h-4 ml-auto shrink-0" />
