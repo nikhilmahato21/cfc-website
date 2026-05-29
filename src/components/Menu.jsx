@@ -12,51 +12,72 @@ const menuData = {
     label: 'Crispy',
     note: 'Hot & crunchy — fried fresh on every order',
     items: [
-      // Crispy Chicken Items
       { name: 'Chicken Crispy Stick', price: 29, unit: '1 pc', tag: 'Crunchy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s' },
       { name: 'Chicken Crispy Stripe', price: 29, unit: '1 pc', tag: 'Crunchy', image: 'https://www.greenchickchop.in/cdn/shop/files/CrispyChickenFinger_1__result.webp?v=1682588223' },
       { name: 'Chicken Crispy Wings', price: 49, unit: '1 pc', tag: 'Saucy', image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg' },
       { name: 'Chicken Crispy Drumstick', price: 59, unit: '1 pc', tag: 'Big Bite', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s' },
-      // Crispy Chicken Pakoda
-      { name: 'Chicken Pakoda', price: 59, unit: '5 pcs', tag: 'Spicy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXe7UYiMgPRYc3_xmMa8-2N6bFanVffQBmw&s' },
-      { name: 'Chicken Wings Pakoda', price: 49, unit: '1 pc', tag: 'Hot', image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg' },
-      { name: 'Chicken Stick Pakoda', price: 29, unit: '1 pc', tag: 'Snack', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s' },
-      { name: 'Chicken Drumstick Pakoda', price: 59, unit: '1 pc', tag: 'Big Bite', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s' },
-      // Chicken Tandoori
-      { name: 'Chicken Tandoori Stick', price: 29, unit: '1 pc', tag: 'Smoky', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
-      { name: 'Chicken Tandoori Wings', price: 49, unit: '1 pc', tag: 'Tandoori', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
-      { name: 'Chicken Tandoori Drumstick', price: 59, unit: '1 pc', tag: 'Juicy', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
     ],
   },
   'meals': {
     label: 'Meals',
-    note: 'Made fresh — chowmin, rolls & maggie to fill you up',
+    note: 'Chowmin, rolls & maggie — made fresh to fill you up',
     items: [
-      // Chowmin
       { name: 'Single Egg Chicken Chowmin', price: 49, tag: 'Classic', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
       { name: 'Double Egg Chicken Chowmin', price: 59, tag: 'Loaded', image: 'https://knifeandsoul.com/wp-content/uploads/2022/09/chicken_chow_mein_step_4.jpg' },
-      // Rolls
       { name: 'Single Egg Chicken Roll', price: 59, tag: 'Classic', image: 'https://img.clevup.in/248878/1660988348406_SKU-0010_0.jpg?width=600&format=webp' },
       { name: 'Double Egg Chicken Roll', price: 69, tag: 'Loaded', image: 'https://storage.googleapis.com/shy-pub/167599/1648445263713_SKU-0675_0.jpg' },
-      // Maggie
       { name: 'Plain Masala Maggie', price: 29, tag: 'Comfort', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
       { name: 'Single Egg Chicken Masala Maggie', price: 49, tag: 'Filling', image: 'https://knifeandsoul.com/wp-content/uploads/2022/09/chicken_chow_mein_step_4.jpg' },
       { name: 'Double Egg Chicken Masala Maggie', price: 59, tag: 'Loaded', image: 'https://myfoodstory.com/wp-content/uploads/2021/07/Easy-Chicken-Chow-Mein-3.jpg' },
     ],
   },
+  'fastfood': {
+    label: 'Fast Food',
+    note: 'Quick bites for when hunger hits fast',
+    items: [
+      { name: 'Chicken Pakoda', price: 59, unit: '5 pcs', tag: 'Spicy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXe7UYiMgPRYc3_xmMa8-2N6bFanVffQBmw&s' },
+      { name: 'Chicken Wings Pakoda', price: 49, unit: '1 pc', tag: 'Hot', image: 'https://www.lifeisbutadish.com/wp-content/uploads/2016/01/Crispy-Baked-Chicken-Wings-9.jpg' },
+      { name: 'Chicken Stick Pakoda', price: 29, unit: '1 pc', tag: 'Snack', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1TOhNxBIH7lKZyd2h-VuvgeVPzG61YrIklg&s' },
+      { name: 'Chicken Drumstick Pakoda', price: 59, unit: '1 pc', tag: 'Big Bite', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4eXJ6v4YR5m6TzmUZpdj9tph_6iNvrd4Ug&s' },
+    ],
+  },
+  'tandoori': {
+    label: 'Tandoori',
+    note: 'Smoky & charred — marinated and roasted to perfection',
+    items: [
+      { name: 'Chicken Tandoori Stick', price: 29, unit: '1 pc', tag: 'Smoky', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
+      { name: 'Chicken Tandoori Wings', price: 49, unit: '1 pc', tag: 'Tandoori', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
+      { name: 'Chicken Tandoori Drumstick', price: 59, unit: '1 pc', tag: 'Juicy', image: 'https://www.oetker.com.my/assets/recipes/assets/8aaf3e3f237f4009912cf8d0a23cd036/1272x764/extrah-skentucky-superhot-spicychickenwings.jpg' },
+    ],
+  },
   'snacks': {
     label: 'Snacks',
-    note: 'Fries, burgers & sandwiches — the perfect combo',
+    note: 'Bite-size and impossible to stop at just one',
     items: [
-      // French Fries
+      { name: 'Potato Twister', price: 29, unit: '1 pc', tag: 'Twist', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjbxfETgmD5nas8jcp6Rkbg5jR0NOV94ZkNw&s' },
+    ],
+  },
+  'fries': {
+    label: 'French Fries',
+    note: 'Golden & salted — fresh out the fryer every time',
+    items: [
       { name: 'French Fries Small', price: 29, unit: 'Small', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
       { name: 'French Fries Medium', price: 39, unit: 'Medium', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
       { name: 'French Fries Big', price: 49, unit: 'Big', tag: 'Side', image: 'https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg' },
-      { name: 'Potato Twister', price: 29, unit: '1 pc', tag: 'Twist', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjbxfETgmD5nas8jcp6Rkbg5jR0NOV94ZkNw&s' },
-      // Burger
+    ],
+  },
+  'burger': {
+    label: 'Burger',
+    note: 'Stacked & sauced — crispy chicken in a soft bun',
+    items: [
       { name: 'Plain Chicken Burger', price: 39, unit: '1 pc', tag: 'Classic', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBffN5VOapKzJ88Y07pBTsWu29TQgcX83-sw&s' },
       { name: 'Cheese Chicken Burger', price: 49, unit: '1 pc', tag: 'Cheesy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBffN5VOapKzJ88Y07pBTsWu29TQgcX83-sw&s' },
-      // Sandwich
+    ],
+  },
+  'sandwich': {
+    label: 'Sandwich',
+    note: 'Toasted & packed — grab and go',
+    items: [
       { name: 'Plain Sandwich', price: 29, unit: '1 pc', tag: 'Simple', image: 'https://img.magnific.com/free-photo/sandwich_1339-1108.jpg?semt=ais_hybrid&w=740&q=80' },
       { name: 'Egg Sandwich', price: 39, unit: '1 pc', tag: 'Eggy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBioXkVeNKqxudv7kelIGuN0ZA1juiuvCk5Q&s' },
       { name: 'Egg Chicken Sandwich', price: 49, unit: '1 pc', tag: 'Loaded', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4n400PqmY5p_25v7-IXD7WVhYmtUM0AMN9A&s' },
@@ -102,22 +123,24 @@ export default function Menu() {
       </motion.div>
 
       {/* Tab switcher */}
-      <div className="flex justify-center gap-2 lg:gap-4 mb-10">
-        {Object.entries(menuData).map(([key, val]) => (
-          <motion.button
-            key={key}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => setActiveTab(key)}
-            className={`px-5 lg:px-8 py-3 rounded-full font-bold uppercase tracking-wider text-xs lg:text-sm transition-all ${
-              activeTab === key
-                ? 'bg-cfc-red text-cfc-cream shadow-lg shadow-cfc-red/30'
-                : 'bg-cfc-cream text-cfc-deep border-2 border-cfc-deep/20 hover:border-cfc-red'
-            }`}
-          >
-            {val.label}
-          </motion.button>
-        ))}
+      <div className="overflow-x-auto -mx-6 lg:mx-0 mb-10" style={{ WebkitOverflowScrolling: 'touch' }}>
+        <div className="flex gap-2 lg:gap-3 px-6 lg:px-0 pb-1 w-max lg:w-auto lg:flex-wrap lg:justify-center mx-auto">
+          {Object.entries(menuData).map(([key, val]) => (
+            <motion.button
+              key={key}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setActiveTab(key)}
+              className={`px-4 lg:px-6 py-2.5 lg:py-3 rounded-full font-bold uppercase tracking-wider text-xs lg:text-sm transition-all whitespace-nowrap shrink-0 ${
+                activeTab === key
+                  ? 'bg-cfc-red text-cfc-cream shadow-lg shadow-cfc-red/30'
+                  : 'bg-cfc-cream text-cfc-deep border-2 border-cfc-deep/20 hover:border-cfc-red'
+              }`}
+            >
+              {val.label}
+            </motion.button>
+          ))}
+        </div>
       </div>
 
       {/* Note */}

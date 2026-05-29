@@ -146,7 +146,7 @@ export default function Story() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
-          <ChefIllustration className="w-full rounded-3xl shadow-2xl" />
+          <img src='https://res.cloudinary.com/dynbpb9u0/image/upload/v1780031165/WhatsApp_Image_2026-05-29_at_09.43.57_iw9aqj.jpg' className="w-full rounded-3xl shadow-2xl" />
           
           {/* Sticker badge */}
           <motion.div
