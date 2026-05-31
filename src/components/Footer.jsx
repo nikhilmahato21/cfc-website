@@ -26,7 +26,9 @@ export default function Footer() {
           <div className="flex gap-3 mt-6">
             <motion.a
               whileHover={{ y: -3, scale: 1.1 }}
-              href="#"
+              href="https://www.instagram.com/cfconline2026?utm_source=qr&igsh=OXB1ajZsOW0wYzNm"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-11 h-11 bg-cfc-deep text-cfc-cream rounded-full flex items-center justify-center hover:bg-cfc-red transition-colors"
               aria-label="Instagram"
             >
@@ -34,7 +36,9 @@ export default function Footer() {
             </motion.a>
             <motion.a
               whileHover={{ y: -3, scale: 1.1 }}
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61589917296490"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-11 h-11 bg-cfc-deep text-cfc-cream rounded-full flex items-center justify-center hover:bg-cfc-red transition-colors"
               aria-label="Facebook"
             >

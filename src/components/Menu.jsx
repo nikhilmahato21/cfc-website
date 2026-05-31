@@ -83,6 +83,16 @@ const menuData = {
       { name: 'Egg Chicken Sandwich', price: 49, unit: '1 pc', tag: 'Loaded', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4n400PqmY5p_25v7-IXD7WVhYmtUM0AMN9A&s' },
     ],
   },
+  'pizza': {
+    label: 'Pizza',
+    note: 'Hand-stretched, loaded with cheese — baked fresh to order',
+    items: [
+      { name: 'Plain Cheese Pizza', price: 69, tag: 'Classic', image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop' },
+      { name: 'Chicken Cheese Pizza', price: 89, tag: 'Loaded', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop' },
+      { name: 'Tandoori Chicken Cheese Pizza', price: 99, tag: 'Smoky', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop' },
+      { name: 'Crispy Chicken Cheese Pizza', price: 99, tag: 'Crunchy', image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600&auto=format&fit=crop' },
+    ],
+  },
   'drinks': {
     label: 'Drinks',
     note: 'Chill out with our refreshing cold drinks & mocktails',
